@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 class Application{
 	public static void main(String[] args){
 	Scanner sc = new Scanner(System.in);
@@ -10,17 +10,17 @@ class Application{
 	System.out.println("a. Circle\nb. Triangle\nc. Quadrilateral\nd. Exit");
 	System.out.println("============================================");
 	System.out.println("============================================");
-	String input=ConIn.readLine();
+	String input=sc.next();
 	
 	if(input.equals("a")){
 		System.out.println("============================================");
 		System.out.println("a. Enter\tb. Exit\n");
-		String cir=ConIn.readLine();
+		String cir=sc.next();
 		if(cir.equals("a")){
 			System.out.println("Enter name: ");
-				String name = ConsoleInput.readLine();
+				String name = sc.next();
 			System.out.println("Enter radius: ");
-				int radius = Integer.parseInt(ConsoleInput.readLine());
+				int radius = sc.nextInt();
 			System.out.println("============================================");
 
 			Circle c = new Circle(name, radius);
@@ -36,16 +36,16 @@ class Application{
 	else if(input.equals("b")){
 		System.out.println("============================================");
 		System.out.println("a. Isosceles\tb. Equilateral\nc. Scalene\td. Exit\n");	
-		String tri=ConIn.readLine();
+		String tri=sc.next();
 			if(tri.equals("a")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("============================================");
 
 				Isosceles i = new Isosceles(name, side1, side2, side3);
@@ -55,13 +55,13 @@ class Application{
 			}
 			else if(tri.equals("b")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("============================================");
 
 				Equilateral e = new Equilateral(name, side1, side2, side3);
@@ -71,19 +71,19 @@ class Application{
 			}
 			else if(tri.equals("c")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("============================================");
 	
-				Scalene sc = new Scalene(name, side1, side2, side3);
-					sc.findPerimeter();
-					sc.findArea();
-					System.out.println(sc.toString());
+				Scalene sca = new Scalene(name, side1, side2, side3);
+					sca.findPerimeter();
+					sca.findArea();
+					System.out.println(sca.toString());
 			}
 			else{
 				x=0;
@@ -93,18 +93,18 @@ class Application{
 	else if(input.equals("c")){
 		System.out.println("============================================");
 		System.out.println("a. Parallelogram\tb. Rectangle\nc. Square\t\td. Trapezoid\ne. Exit\n");	
-		String qua=ConIn.readLine();
+		String qua=sc.next();
 		if(qua.equals("a")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("Enter side4: ");
-					int side4 = Integer.parseInt(ConsoleInput.readLine());
+					int side4 = sc.nextInt();
 			System.out.println("============================================");
 	
 			Parallelogram p = new Parallelogram(name, side1, side2, side3, side4);
@@ -115,15 +115,15 @@ class Application{
 		
 		else if(qua.equals("b")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("Enter side4: ");
-					int side4 = Integer.parseInt(ConsoleInput.readLine());
+					int side4 = sc.nextInt();
 			System.out.println("============================================");
 	
 			Rectangle r = new Rectangle(name, side1, side2, side3, side4);
@@ -134,15 +134,15 @@ class Application{
 		
 		else if(qua.equals("c")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("Enter side4: ");
-					int side4 = Integer.parseInt(ConsoleInput.readLine());
+					int side4 = sc.nextInt();
 			System.out.println("============================================");
 	
 			Square sq = new Square(name, side1, side2, side3, side4);
@@ -153,15 +153,15 @@ class Application{
 		
 		else if(qua.equals("d")){
 			System.out.println("Enter name: ");
-					String name = ConsoleInput.readLine();
+					String name = sc.next();
 			System.out.println("Enter side1: ");
-					int side1 = Integer.parseInt(ConsoleInput.readLine());
+					int side1 = sc.nextInt();
 			System.out.println("Enter side2: ");
-					int side2 = Integer.parseInt(ConsoleInput.readLine());
+					int side2 = sc.nextInt();
 			System.out.println("Enter side3: ");
-					int side3 = Integer.parseInt(ConsoleInput.readLine());
+					int side3 = sc.nextInt();
 			System.out.println("Enter side4: ");
-					int side4 = Integer.parseInt(ConsoleInput.readLine());
+					int side4 = sc.nextInt();
 			System.out.println("============================================");
 	
 			Trapezoid t = new Trapezoid(name, side1, side2, side3, side4);
