@@ -36,7 +36,7 @@ abstract class Quadrilateral extends Polygon{
 
 	public String toString(){
 		String display = super.toString();
-		display += "\nArea: " + area;
+		display += "\nArea: " + String.format( "%.2f", area );
 		display += "\n\tside1: " + side1 + "\n\tside2: " + side2 + "\n\tside3: " + side3 + "\n\tside4: " + side4;
 		return display;
 	}
