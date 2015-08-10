@@ -31,8 +31,8 @@ class Circle extends Shape{
 		String display = "\nCircle";
 		display += super.toString();
 		display += "\n\tRadius: " + radius;
-		display += "\n\tCircumference: " + perimeter;
-		display += "\n\tArea: " + area + "\n";
+		display += "\n\tCircumference: " + String.format( "%.2f", perimeter );
+		display += "\n\tArea: " + String.format( "%.2f", area ) + "\n";
 		return display;
 	}
 
